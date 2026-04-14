@@ -11,7 +11,7 @@ const startTelegramBot = () => {
         const chatId = msg.chat.id;
         const msgId = msg.message_id;
         const msgText = msg.text;
-        if (msgText && /т+ю+/i.test(msgText)) {
+        if ((msgText && /т+ю+/i.test(msgText)) || (msgText && /t+u+/i.test(msgText))) {
             return await TGBot.deleteMessage(chatId, msgId);
         }
     })
