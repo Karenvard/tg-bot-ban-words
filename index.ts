@@ -11,7 +11,6 @@ const startTelegramBot = () => {
         const chatId = msg.chat.id;
         const msgId = msg.message_id;
         const msgText = msg.text;
-        console.log("msgText: ",msgText);
         if (msgText?.toLocaleLowerCase().split(" ").includes("тю")) {
             return await TGBot.deleteMessage(chatId, msgId);
         }
