@@ -79,7 +79,7 @@ TGBot.on("message", async (msg) => {
     console.log(text);
 
 
-    if (containsBad(text)) {
+    if (containsBad(text) || text.trim() === "") {
       await TGBot.deleteMessage(chatId, msgId);
     }
 
