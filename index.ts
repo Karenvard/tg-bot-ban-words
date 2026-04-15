@@ -79,7 +79,7 @@ TGBot.on("message", async (msg) => {
     console.log(text);
 
 
-    if (containsBad(text) || text.trim() === "") {
+    if (containsBad(text) || text.trim() === "" || text.includes("YouTube")) {
       await TGBot.deleteMessage(chatId, msgId);
     }
 
